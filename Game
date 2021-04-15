@@ -1,0 +1,32 @@
+#include <cs50.h>
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
+int main(void){
+    string user = get_string("Hello user! What would you like to be called?  ");
+    printf("%s, welcome to my text based Bible game!\n", user);
+    printf("This first game is called: Fill in the verse! All you have to do is fill in the missing word(s)\n");
+    string q1 = get_string("For God so ___ the world that he gave his one and only ___, that whoever believes in him shall not perish but have ____ life. John 3:16 niv \n");
+  
+   if(strstr(q1, "loved") != NULL) {
+    if(strstr(q1, "Son") != NULL) {
+        if(strstr(q1, "eternal") != NULL) {
+            printf("Correct");
+            
+            fprintf(playerpoints, "+1\n");
+        }
+    }
+}
+else{
+    printf("Incorrect please try agian.\n");
+    string q1t2 = get_string("For God so ___ the world that he gave his one and only ___, that whoever believes in him shall not perish but have ____ life. John 3:16 niv \n");
+  
+   if(strstr(q1t2, "loved") != NULL) {
+    if(strstr(q1t2, "Son") != NULL) {
+        if(strstr(q1t2, "eternal") != NULL) {
+            printf("Correct");
+        }
+    }
+}
+}
+}
