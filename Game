@@ -2,18 +2,41 @@
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
+
 int main(void){
     string user = get_string("Hello user! What would you like to be called?  ");
     printf("%s, welcome to my text based Bible game!\n", user);
-    printf("This first game is called: Fill in the verse! All you have to do is fill in the missing word(s)\n");
+    printf("This first game is called: Fill in the verse! All you have to do is fill in the missing word(s). When you chose a mode this one is 'A'\n");
     string q1 = get_string("For God so ___ the world that he gave his one and only ___, that whoever believes in him shall not perish but have ____ life. John 3:16 niv \n");
-  
+  int points = 0;
    if(strstr(q1, "loved") != NULL) {
     if(strstr(q1, "Son") != NULL) {
         if(strstr(q1, "eternal") != NULL) {
-            printf("Correct");
-            
-            fprintf(playerpoints, "+1\n");
+            printf("Correct, and you have recieved a point!\n");
+           points++;
+    string t2 = get_string("Mode B for future reference. This mode is called: Guess the person. This first person hung on a cross for our sins. This person was born in a manger to a virgin. Names need to be capital to work.  ");
+           if(strstr(t2, "Jesus") != NULL){
+               printf("Correct! +1 point\n");
+               points++;
+           }
+           
+   
+    string mode = get_string("What mode would you like to keep playing: ");
+    
+    if(strstr(mode, "A") != NULL){
+        string q2 = get_string("Be ___ and courageous. Do not be ____ or terrified because of them, for the Lord your God goes with you; he will ____ leave you nor forsake you. Deutoronomy 31:6\n");
+    if(strstr(q2, "strong") != NULL) {
+    if(strstr(q2, "afraid") != NULL) {
+    if(strstr(q2, "never") != NULL) {
+        printf("Correct! You now have one more point.");
+    }
+    }
+    }
+        if(strstr(mode, "B") != NULL){
+            printf("This mode is not ready yet.");
+        }
+    }
+   
         }
     }
 }
