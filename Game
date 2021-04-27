@@ -41,6 +41,15 @@ int modeA() {
               points++;
             }
           }
+      string hcsb5 = get_string("Love the Lord your God with all your ____, with all your ___, with all your ____, and with all your strength. Mark 12:30 hcsb\n ");
+        if (strstr(hcsb5, "heart") != NULL){
+          if (strstr(hcsb5, "soul") != NULL){
+            if (strstr(hcsb5, "mind") != NULL){
+          printf("Correct! +1");
+          points++;
+        }
+        }
+        }
         }
     }
     if (strstr(version, "NIV") != NULL){
@@ -78,9 +87,18 @@ int modeA() {
         points++;
       }
     }
-    string q5 = get_string(" ");
-
-  }
+    string q5 = get_string("The Lord is my _____ and my salvation whom shall I fear? The Lord is the stronghold of my ____ of whom shall I be afraid? Psalm 27:1 niv ");
+    if (strstr(q5, "light") != NULL){
+      if (strstr(q5, "life") != NULL){
+        printf("Correct! +1");
+      }
+    }
+    string q6 = get_string("He replied, 'If you have faith as small as a _____ seed, you can say to this mulberrytree, 'Be uprooted and planted in the sea', and it will obey you'");
+    if (strstr(q6, "mustard") != NULL){
+      printf("Correct! ")
+    }
+      
+    }
   return points;
   printf("Points: %i", points);
   }
